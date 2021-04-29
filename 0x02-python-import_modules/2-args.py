@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     from sys import argv
-    contador = len(argv) - 1
-    if contador == 0:
-        print("0 arguments")
-    if contador == 1:
+    counter = len(argv) - 1
+    if counter == 0:
+        print("0 arguments.")
+    if counter == 1:
         print("1 argument:")
-        print("{}: {}".format(contador, argv[1]))
-    if contador > 1:
-        print("{} arguments:".format(contador))
-        for contador in range(1, contador + 1):
-            print("{}: {}".format(contador, argv[contador]))
+        print("{}: {}".format(counter, argv[1]))
+    if counter > 1:
+        print("{} arguments:".format(counter))
+        for counter in range(1, counter + 1):
+            print("{}: {}".format(counter, argv[counter]))
