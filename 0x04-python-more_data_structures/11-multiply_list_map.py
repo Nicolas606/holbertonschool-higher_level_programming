@@ -2,4 +2,3 @@
 def multiply_list_map(my_list=[], number=0):
     copy = my_list.copy()
     return (list(map(lambda x: x * number, copy)))
-
