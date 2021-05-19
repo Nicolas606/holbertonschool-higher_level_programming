@@ -3,9 +3,8 @@
 
 
 class Square:
-
+    """ Class Constructor"""
     def __init__(self, size=0):
-        """ Class Constructor"""
         if isinstance(size, (int)) == 1:
             if size < 0:
                 raise TypeError("size must be >= 0")
