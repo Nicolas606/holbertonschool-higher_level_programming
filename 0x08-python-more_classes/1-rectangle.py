@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module: For defining the Square class.."""
+"""Module: For defining the Rectangle class.."""
 
 
 class Rectangle:
@@ -16,7 +16,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """ Private Attribute width Setter """
-        if isinstance(value, (int)) == 1:
+        if isinstance(value, (int)) is True:
             if value < 0:
                 raise ValueError("width must be >= 0")
             else:
@@ -32,8 +32,8 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """ Private Attribute height Setter """
-        if isinstance(value, (int)) == 1:
-            if value == 0:
+        if isinstance(value, (int)) is True:
+            if value < 0:
                 raise ValueError("height must be >= 0")
             else:
                 self.__height = value
