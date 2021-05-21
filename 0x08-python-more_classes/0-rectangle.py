@@ -1,7 +1,7 @@
 #!/bin/usr/python3
-"""Module: For defining the Square class.."""
+"""Module: For defining the Rectangle class.."""
 
 
 class Rectangle:
-    """ Class: For defining a Rectangule object. """
+    """ Empty Class defining a square """
     pass
