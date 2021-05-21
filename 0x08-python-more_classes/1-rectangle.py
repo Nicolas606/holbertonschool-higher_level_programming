@@ -5,6 +5,7 @@
 class Rectangle:
     """ Class: For defining a Rectangule object. """
     def __init__(self, width=0, height=0):
+        """ Method that initializes the class """
         self.__width = width
         self.__height = height
 
