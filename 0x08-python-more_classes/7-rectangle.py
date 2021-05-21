@@ -63,8 +63,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return str_rect
         else:
+            symbol = str(self.print_symbol)
             for i in range(self.__height):
-                str_rect += "{}".format('#' * self.__width)
+                str_rect += "{}".format(symbol * self.__width)
                 if i != (self.__height - 1):
                     str_rect += '\n'
         return str_rect
