@@ -17,7 +17,7 @@ class Rectangle:
     def width(self, value):
         """ Private Attribute width Setter """
         if isinstance(value, int) is True:
-            if value <= 0:
+            if value < 0:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = value
@@ -33,7 +33,7 @@ class Rectangle:
     def height(self, value):
         """ Private Attribute height Setter """
         if isinstance(value, int) is True:
-            if value <= 0:
+            if value < 0:
                 raise ValueError("height must be >= 0")
             else:
                 self.__height = value
