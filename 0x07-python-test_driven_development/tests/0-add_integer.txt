@@ -6,16 +6,16 @@
 
 # Test whit the arguments is integer o float
 
->>>add_integer(10, 5)
+>>> add_integer(10, 5)
 15
 
->>>add_integer(10, -5)
+>>> add_integer(10, -5)
 5
 
->>>add_integer(10.8, 5.5)
+>>> add_integer(10.8, 5.5)
 15
 
->>>add_integer(10.5, -5.3)
+>>> add_integer(10.5, -5.3)
 5
 
 -----------------------------------------------------------
