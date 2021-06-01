@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module: returns an object (Python data structure) represented by a JSON 
+""" Module: returns an object (Python data structure) represented by a JSON
 string"""
 
 import json
