@@ -13,7 +13,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """ Retrieves Class dictionary """
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
 
         directory = {}
