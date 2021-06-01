@@ -1,0 +1,70 @@
+# Import the function
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+
+>>> matrix = [[5, 10, 15], [20, 25, 30]]
+>>> matrix_1 = [[5, 10], [15, 20, 25]]
+>>> matrix_2 = [[5, 'holberton'], [10, 15]]
+>>> matrix_3 = [ 5, 10, [15, 20]]
+>>> matrix_4 = 5
+>>> matrix_5 = [[5, 10, 15]]
+
+-----------------------------------------------------------
+
+# Test whit numbers
+
+>>> matrix_divided(matrix, 2)
+[[2.5, 5, 7.5], [10, 12.5, 15]]
+
+>>> matrix_divided(matrix, 2.7)
+[[1.85, 3.70, 5.55], [7.40, 9.25, 11,11]]
+
+-----------------------------------------------------------
+
+# Test if the matrix have different size
+
+>>> matrix_divided(matrix_1, 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+-----------------------------------------------------------
+
+# Test if the elemnts of matrix different a integer
+
+>>> matrix_divided(matrix_2, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+-----------------------------------------------------------
+
+# Tests if the matrix isn't a list
+
+>>> matrix_divided(matrix_3, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(matrix_4, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(matrix_4, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+-----------------------------------------------------------
+
+# Test if div is equal to 0
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+-----------------------------------------------------------
+
+# Test if div is different a number
+
+>>>matrix_divided(matrix, 'holberton')
+Traceback (most recent call last):
+TypeError: div must be a number
