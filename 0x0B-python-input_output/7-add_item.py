@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module: script that adds all arguments to a Python list, and then save 
+""" Module: script that adds all arguments to a Python list, and then save
 them to a file"""
 
 from sys import argv
