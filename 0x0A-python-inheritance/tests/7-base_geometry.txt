@@ -4,7 +4,7 @@
 
 -----------------------------------------------------------
 
-#
+#Tests the function
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
