@@ -4,11 +4,10 @@
 
 -----------------------------------------------------------
 
-#Tests the function
+# Tests the function
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
-
 >>> bg.integer_validator("width", 89)
 
 # test if the value is a integer
@@ -18,14 +17,6 @@ Traceback (most recent call last):
 TypeError: name must be an integer
 
 >>> bg.integer_validator('name', 15.5)
-Traceback (most recent call last):
-TypeError: name must be an integer
-
->>> bg.integer_validator('name', -15.5)
-Traceback (most recent call last):
-TypeError: name must be an integer
-
->>> bg.integer_validator('name', True)
 Traceback (most recent call last):
 TypeError: name must be an integer
 
