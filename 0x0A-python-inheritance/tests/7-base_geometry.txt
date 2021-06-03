@@ -1,0 +1,40 @@
+# Import the function
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+-----------------------------------------------------------
+
+#
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
+>>> bg.integer_validator('name', 'Nicolas')
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator('name', 15.5)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator('name', -15.5)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator('name', True)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator('name', 0)
+Traceback (most recent call last):
+TypeError: name must be greater than 0
+
+>>> bg.integer_validator('name', -15)
+Traceback (most recent call last):
+TypeError: name must be greater than 0
+
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
