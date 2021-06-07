@@ -7,10 +7,10 @@ class Rectangle(Base):
     """ Class Rectangle that inherits from Base """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
@@ -67,3 +67,12 @@ class Rectangle(Base):
     def area(self):
         """ Area the rectangle """
         return (self.width * self.height)
+
+    def display(self):
+        """that prints in stdout the Rectangle instance with the character #"""
+        for i in range(self.height):
+            print('#' * self.width)
+
+    def __str__(self):
+        stdout = '[Rectangle] {} {}/{} - {}/{}'
+        return stdout.format(self.id, self.x, self.y, self.width, self.height)
