@@ -78,3 +78,10 @@ class Rectangle(Base):
     def __str__(self):
         stdout = '[Rectangle] {} {}/{} - {}/{}'
         return stdout.format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """  """
+        list = ['id', 'width', 'height', 'x', 'y']
+        if args:
+            for arg in range(len(args)):
+                setattr(self, list[arg], args[arg])
