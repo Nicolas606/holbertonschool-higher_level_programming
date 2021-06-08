@@ -76,12 +76,16 @@ class Rectangle(Base):
             print('#' * self.width)
 
     def __str__(self):
-        stdout = '[Rectangle] {} {}/{} - {}/{}'
+        stdout = '[Rectangle] ({}) {}/{} - {}/{}'
         return stdout.format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """  """
         list = ['id', 'width', 'height', 'x', 'y']
         if args:
             for arg in range(len(args)):
                 setattr(self, list[arg], args[arg])
+
+        for i in kwargs.keys():
+            if i in dir(self):
+                setattr(self, i, kwargs[i])
