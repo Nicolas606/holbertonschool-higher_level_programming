@@ -7,11 +7,10 @@ class Rectangle(Base):
     """ Class Rectangle that inherits from Base """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
     @property
     def width(self):
         """ whidth the rectangle """
@@ -36,7 +35,7 @@ class Rectangle(Base):
             raise TypeError("{} must be an integer".format('height'))
         if value <= 0:
             raise ValueError("{} must be > 0".format('height'))
-        self.__width = value
+        self.__height = value
 
     @property
     def x(self):
@@ -80,7 +79,7 @@ class Rectangle(Base):
         return stdout.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """  """
+        """ Update """
         list = ['id', 'width', 'height', 'x', 'y']
         if args:
             for arg in range(len(args)):
@@ -89,3 +88,9 @@ class Rectangle(Base):
         for i in kwargs.keys():
             if i in dir(self):
                 setattr(self, i, kwargs[i])
+
+    def to_dictionary(self):
+        """Dictionary """
+        dictionary = {'id': self.id, 'width': self.width,
+                      'height': self.height, 'x': self.x, 'y': self.y}
+        return dictionary
