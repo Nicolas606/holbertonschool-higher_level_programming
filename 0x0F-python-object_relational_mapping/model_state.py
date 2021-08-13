@@ -13,11 +13,8 @@ db = 'hbtn_0e_6_usa'
 u_host = 'localhost'
 
 # dialect+driver://username:password@host:port/database
-engine = create_engine("mysql+mysqldb://{}:{}@{}:{}/{}".format(u_name,
-                                                              u_pass,
-                                                              u_host,
-                                                              port,
-                                                              db))
+engine = create_engine("mysql+mysqldb://{}:{}@{}:{}/{}".
+                       format(u_name, u_pass, u_host, port, db))
 
 Base = declarative_base()
 
