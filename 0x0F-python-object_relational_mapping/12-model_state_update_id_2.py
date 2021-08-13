@@ -20,7 +20,7 @@ if __name__ == '__main__':
     session = Session()
 
     q_sql = session.query(State).filter(State.id == 2)
-    result = q_sql.one
+    result = q_sql.one()
     result.name = "New Mexico"
 
     session.commit()
