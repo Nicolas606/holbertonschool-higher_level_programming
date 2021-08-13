@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """ Module: model_state.py """
 
-from sqlalchemy import create_engine  # CONNECTS US WITH THE DATABASE
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.log import rootlogger
 from sqlalchemy.ext.declarative import declarative_base
 
 u_name = "root"
-u_pass = "Nicolas3"
+u_pass = "Root33"
 port = 3306
 db = 'hbtn_0e_6_usa'
 u_host = "localhost"
