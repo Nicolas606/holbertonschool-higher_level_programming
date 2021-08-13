@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     # dialect+driver://username:password@host:port/database
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".
-                           format(uname, upass, db), pull_pre_ping=True)
+                           format(uname, upass, db), pool_pre_ping=True)
 
     """link to our engine """
     Session = sessionmaker(bind=engine)
