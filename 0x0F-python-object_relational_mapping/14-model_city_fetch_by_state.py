@@ -21,8 +21,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    q_sql = session.query(State.name, City.id, City.name).join(State)
+    q_sql = session.query(State.name, City.id, City.name)\
+        .filter(State.id == City.state_id)
     result = q_sql.order_by(City.id).all()
 
     for i in result:
-        print("{}: ({}) {}".formay(i[0], i[1], i[2]))
+        print("{}: ({}) {}".format(i[0], i[1], i[2]))
