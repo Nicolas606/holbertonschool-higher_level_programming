@@ -8,7 +8,7 @@ if __name__ == "__main__":
     userpass = argv[2]
     url = 'https://api.github.com/user'
 
-    req = requests.get( url, auth=('userName', 'userpass'))
+    req = requests.get( url, auth=(userName, userpass))
     try:
         print(req.json().get('id'))
     except:
