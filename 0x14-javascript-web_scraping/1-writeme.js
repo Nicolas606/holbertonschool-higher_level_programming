@@ -5,9 +5,8 @@ const fs = require('fs');
 const archivo = process.argv[2];
 const data = process.argv[3];
 
-fs.writefile(archivo,data, 'utf8', (err) => {
+fs.writeFile(archivo, data, 'utf8', (err) => {
   if (err) {
     console.log(err);
-    return;
   }
 });
