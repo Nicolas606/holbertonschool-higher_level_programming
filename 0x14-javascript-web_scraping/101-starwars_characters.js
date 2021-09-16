@@ -10,8 +10,7 @@ request(url, function (error, response) {
   }
   const characters = (JSON.parse(response.body).characters);
   characters.forEach(element => {
-    const people = element;
-    request(people, function (error, response) {
+    request(element, function (error, response) {
       if (error) {
         console.log(error);
       }
