@@ -8,15 +8,15 @@ request(url, function (error, response) {
   if (error) {
     console.log(error);
   }
-  const characters = (JSON.parse(response.body).characters)
+  const characters = (JSON.parse(response.body).characters);
   characters.forEach(element => {
     const people = element;
     request(people, function (error, response) {
       if (error) {
         console.log(error);
       }
-      const result = (JSON.parse(response.body).name)
+      const result = (JSON.parse(response.body).name);
       console.log(result);
     });
-  })
+  });
 });

@@ -13,7 +13,7 @@ request(url, function (error, response, body) {
   data.forEach(element => {
     if (element.completed === true) {
       list[element.userId] += 1;
-      if (isNaN(list[element.userId])){
+      if (isNaN(list[element.userId])) {
         list[element.userId] = 1;
       }
     }
